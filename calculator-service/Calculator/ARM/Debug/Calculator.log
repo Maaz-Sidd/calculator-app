@@ -1,5 +1,0 @@
-﻿  pch.cpp
-  dllmain.cpp
-  Calculator.cpp
-  Generating Code...
-ARM\Debug\dllmain.obj : fatal error LNK1112: module machine type 'x86' conflicts with target machine type 'ARM'

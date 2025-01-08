@@ -1,5 +1,0 @@
-﻿  Calculator.cpp
-C:\Users\MaazSIDDIQI\source\repos\Calculator\Calculator\Calculator.h(16,45): warning C4190: 'get_expression' has C-linkage specified, but returns UDT 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' which is incompatible with C
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30133\include\xstring(4871): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-     Creating library C:\Users\MaazSIDDIQI\source\repos\Calculator\x64\Debug\Calculator.lib and object C:\Users\MaazSIDDIQI\source\repos\Calculator\x64\Debug\Calculator.exp
-  Calculator.vcxproj -> C:\Users\MaazSIDDIQI\source\repos\Calculator\x64\Debug\Calculator.dll
