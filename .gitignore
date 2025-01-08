@@ -25,7 +25,7 @@
 /x64/Release/
 /Win32/Debug/
 /Win32/Release/
-/Win64x
+*/Win64x
 /__history
 /__recovery
 
