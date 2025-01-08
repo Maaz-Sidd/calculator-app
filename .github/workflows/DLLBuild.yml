@@ -1,0 +1,21 @@
+name: Build DLLs
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Visual Studio
+      uses: microsoft/setup-msbuild@v1.0.2
+
+    - name: Build DLLs
+      run: |
+        msbuild /t:Build /p:Configuration=Debug /p:Platform=x64 ./calculator-service/Calculator.sln
