@@ -18,4 +18,4 @@ jobs:
 
     - name: Build DLLs
       run: |
-        msbuild /t:Build /p:Configuration=Debug ./calculator-service/Calculator.sln
+        msbuild /t:Build /p:Configuration=Debug /p:Platform=x64 ./calculator-service/Calculator.sln
