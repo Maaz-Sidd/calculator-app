@@ -7,7 +7,6 @@
 #include <typeinfo>
 #include <iostream>
 #include <fstream>
-#include <wchar.h>
 
 #pragma hdrstop
 
@@ -175,8 +174,7 @@ void __fastcall TForm1::GridButtonClick(TObject *Sender){
 
 	UnicodeString text = UnicodeString(curr_expression.c_str());
 
-	//std::cout << "unicodeString: " << text.c_str() << std::endl;
-	wprintf(L"unicodeString: %ls\n", text.c_str());
+	std::cout << "unicodeString: " << text.c_str() << std::endl;
 
 	Label1->Caption = text;
 
