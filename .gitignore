@@ -21,16 +21,16 @@
 /build/
 */Debug/
 /Release/
-*/x64/Debug/
-/x64/Release/
+*/*/x64/Debug/
+*/*/x64/Release/
 /Win32/Debug/
 /Win32/Release/
 */Win64x
 /__history
 /__recovery
-/ARM/
-/ARM/Debug/
-/ARM/Release/
+*/*/ARM/
+*/*/ARM/Debug/
+*/*/ARM/Release/
 
 # Ignore IDE-specific files
 *.cbproj.local
