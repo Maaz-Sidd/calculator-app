@@ -27,7 +27,7 @@
 /Win32/Debug/
 /Win32/Release/
 */Win64x
-/__history
+*/__history
 /__recovery
 */*/ARM/
 */*/ARM/Debug/
