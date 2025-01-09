@@ -22,6 +22,7 @@ void AttachConsole() {
 	FILE* stream;
 	freopen_s(&stream, "CONOUT$", "w", stdout);
 	freopen_s(&stream, "CONOUT$", "w", stderr);
+	//test
 }
 
 void calculator_init() {
