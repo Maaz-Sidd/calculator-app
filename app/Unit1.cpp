@@ -153,34 +153,28 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 
 }
 
-void __fastcall TForm1::GridButtonClick(TObject *Sender){
-	std::cout << "button pressed" << std::endl;
-	// Convert TButton's Text (System::String) to std::string
+void __fastcall TForm1::GridButtonClick(TObject *Sender)
+{
+    TButton* button = dynamic_cast<TButton*>(Sender);
+    if (!button) return;
 
-	UnicodeString buttonText = dynamic_cast<TButton*>(Sender)->Caption;
-	std::string buttonTextStr = AnsiString(buttonText).c_str();
+    // Get the button text
+    AnsiString buttonText = button->Caption;
 
-	// Append the text from the button (now in std::string) to expression
+    // Call the DLL function
+    calc(buttonText.c_str());
 
-	expression = buttonTextStr;
-	// Set Label1's Text (convert std::string back to UnicodeString for the Label)
+    // Get the expression back from DLL
+    const char* expr = get_expression();
+    if (expr) {
+        // Convert directly to AnsiString first
+        AnsiString ansiStr(expr);
+        Label1->Caption = ansiStr;
 
-	std::cout << "expression: " << expression << std::endl;
-
-	// Call the calculate function with the std::string expression converted to const char*
-	calc(expression.c_str());
-
-	std::string curr_expression = get_expression();
-	std::cout << "curr expression: " << curr_expression << std::endl;
-
-	UnicodeString text = UnicodeString(curr_expression.c_str());
-
-	//std::cout << "unicodeString: " << text.c_str() << std::endl;
-	wprintf(L"unicodeString: %ls\n", text.c_str());
-
-	Label1->Caption = text;
-
-	//ShowMessage(get_total());
+        // Debug output
+        std::cout << "Button pressed: " << buttonText.c_str() << std::endl;
+        std::cout << "Expression returned: " << expr << std::endl;
+    }
 }
 
 //---------------------------------------------------------------------------

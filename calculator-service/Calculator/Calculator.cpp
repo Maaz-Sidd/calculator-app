@@ -115,6 +115,8 @@ double get_total() {
 	return total;
 }
 
-std::string get_expression() {
-	return expression;
+const char * get_expression() {
+	static std::string temp; 
+	temp = expression;
+	return temp.c_str();
 }

@@ -24,7 +24,7 @@ public:		// User declarations
 	typedef double(__stdcall *pGet_Total)();
 	typedef void(__stdcall *pInit)();
 	typedef void(__stdcall *pCalc)(const char*);
-	typedef std::string(__stdcall *pGet_expression)();
+	typedef const char*(__stdcall *pGet_expression)();
 
 	pCalc calc;
 	pGet_Total get_total;

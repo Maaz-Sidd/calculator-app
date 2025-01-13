@@ -13,6 +13,6 @@ extern "C"{
 	CALCULATOR_API void calculator_init();
 	CALCULATOR_API double get_total();
 	CALCULATOR_API void calculate(const char* input);
-	CALCULATOR_API std::string get_expression();
+	CALCULATOR_API const char* get_expression();
 	
 }
