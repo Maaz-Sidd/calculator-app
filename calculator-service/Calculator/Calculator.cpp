@@ -12,6 +12,7 @@
 double total;
 std::string expression;
 bool lastCharIsOperation = false;
+bool decimalInLastNum = false;
 
 double evaluateExpression(const std::string& expr);
 int precedence(char op);
@@ -32,10 +33,13 @@ void calculator_init() {
 void processCharacter(char input) {
 	if (std::isdigit(input) || input == '.') { 
 		// Handle digits and decimal point 
-		if (input == '.' && expression.find('.') != std::string::npos) { 
+		if (input == '.' && decimalInLastNum == true) { 
 			// Ignore additional decimal points if one already exists in the current number 
 			return; 
-		} 
+		}
+		else if (input == '.') {
+			decimalInLastNum = true;
+		}
 		expression += input; 
 		lastCharIsOperation = false; 
 	} else if (input == '+' || input == '-' || input == '*' || input == '/' || input == '=') { 
@@ -43,6 +47,7 @@ void processCharacter(char input) {
 		if (!lastCharIsOperation) { 
 			expression += input; 
 			lastCharIsOperation = true; 
+			decimalInLastNum = false;
 		} if (input == '=') { 
 			// Evaluate the expression 
 			total = evaluateExpression(expression); 
