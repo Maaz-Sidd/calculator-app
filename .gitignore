@@ -32,6 +32,8 @@
 */*/ARM/
 */*/ARM/Debug/
 */*/ARM/Release/
+/backup
+post-push.sh
 
 # Ignore IDE-specific files
 *.cbproj.local
