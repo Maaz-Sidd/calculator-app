@@ -30,7 +30,8 @@ void AttachConsole() {
 __fastcall TForm1::TForm1(TComponent* Owner)
 	: TForm(Owner)
 {
-
+	//test
+    //this is a test
 	AttachConsole();
 
 	std::cout << "Application Started..." << std::endl;
