@@ -32,6 +32,7 @@ void calculator_init() {
 
 void processCharacter(char input) {
 	//test
+	//this is a test
 	if (std::isdigit(input) || input == '.') { 
 		// Handle digits and decimal point 
 		if (input == '.' && decimalInLastNum == true) { 
